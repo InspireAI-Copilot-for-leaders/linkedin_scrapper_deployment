@@ -462,5 +462,3 @@ if __name__ == "__main__":
 
     scraper = LinkedInScraper(headless=True)
     user_posts = scraper.scrape_pipeline(profile_url, bucket_name)
-
-    return f"Scraping completed. {len(user_posts)} posts scraped and saved to gs://{bucket_name}/"
