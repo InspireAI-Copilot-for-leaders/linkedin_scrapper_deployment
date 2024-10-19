@@ -451,14 +451,14 @@ class LinkedInScraper:
         finally:
             self.cleanup()
 
-# Example Usage
-if __name__ == "__main__":
-    # profile_url = "https://www.linkedin.com/in/krishant-sethia-976a50174/"
-    # bucket_name = "linkedin_scrapper_csv_files"
+# # Example Usage
+# if __name__ == "__main__":
+#     # profile_url = "https://www.linkedin.com/in/krishant-sethia-976a50174/"
+#     # bucket_name = "linkedin_scrapper_csv_files"
 
-    profile_url = os.getenv('PROFILE_URL', 'https://www.linkedin.com/in/krishant-sethia-976a50174/')
-    bucket_name = "linkedin_scrapper_csv_files"
+#     profile_url = os.getenv('PROFILE_URL', 'https://www.linkedin.com/in/krishant-sethia-976a50174/')
+#     bucket_name = "linkedin_scrapper_csv_files"
 
 
-    scraper = LinkedInScraper(headless=True)
-    user_posts = scraper.scrape_pipeline(profile_url, bucket_name)
+#     scraper = LinkedInScraper(headless=True)
+#     user_posts = scraper.scrape_pipeline(profile_url, bucket_name)
