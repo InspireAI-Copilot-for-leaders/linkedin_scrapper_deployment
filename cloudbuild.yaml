@@ -1,0 +1,10 @@
+  steps:
+    # Build the container image
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['build', '-t', 'asia-south2-docker.pkg.dev/inspire-ai-40690/inspireai-apis-1/linkedin_post_scrapper:$COMMIT_SHA', '.']
+    # Push the container image to Container Registry
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['push', 'asia-south2-docker.pkg.dev/inspire-ai-40690/inspireai-apis-1/linkedin_post_scrapper:$COMMIT_SHA']
+  images:
+    - 'asia-south2-docker.pkg.dev/inspire-ai-40690/inspireai-apis-1/linkedin_post_scrapper:$COMMIT_SHA'
+

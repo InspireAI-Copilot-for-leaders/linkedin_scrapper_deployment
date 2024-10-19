@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "inspire-ai-40690",
+  "private_key_id": "97d8a0a015fc6ff6100140e2deba86558141f2d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCkOcjRQR2dT3Zk\n2jjauxZmJ0s1XB9vT8vtb2zdHl5yNylWup/Kry9+wD2RrOHbraSD63eKGrL0WHUH\nMThy+LUlZKx6KfQbKOXlCb2j6rj8yjKgjhv9RytNiEEXlbsPfE7x5c4FdJkilxld\nfd5VCccwBGkAgiUFym+bSZUUcciBtppNma6MDn22BFYyPTgKUQ4N4JMt/6x7oclc\nVjARosxphNvuDQuQ2Occ8YwJ1XgaJANPOrHGa7aqoRFK1Zd7oiD3M1hsZNblGreE\nsJoejUxemaGpMyLmZi7WiD35vzwTwBaraKDiXMwA0Dg9ONKwlmocqB0bq469zNZA\nTV+LMpk5AgMBAAECggEARpwZve7zXrnVu9Mf8tvR66YlbhHn6iIzGil4czIlhZI2\nEfY30hu0nhjl4AanLZ7hR18sjJKiMvD9kFQXY0eQCz3X8sarECprfijMAvhfBUGi\ntumjGylIcxOMeSmFvkjCYLtf83SIixjQbSQ7PfDwVbLvuqo6ZNz/U5M1qA6sGSjL\nZgsu2ly6AwN+ivn4B6R/a1dSJ1HeoPryjPQJ9TbcKV60iylqkw27HBF8gxavm95O\n1o+IL/mtw023FE8ueSwmKxGaNZSi5btCEC5ZCWjvIBjUaPC2an2L7qPob9tkqvVw\n1Su55h5jo/Ng4JH9Y7QF6gpUW71WW9vp77KXGoE4KQKBgQDCIPQc9GDO/nGn1tJO\nHvcg5vgfdxwyriE1BOPK4kAFI1jgPpVGveBl3p+SOJhzeDGpI1u0I6gDsKit7dJd\nyvSPW0pSl4uT+l81lcptUWLmXZAzON8OaANeIfGV0+pFbuJVngw7Ko9g9K+jdzdG\nESaH5j1WRfgo8jkOOKSMT0BsvwKBgQDYkQgm8AHz1sHteeJo+Awl9BjvSL2XZO/E\nZxYHH+8KNgde9/eijQM98V0ufM8HC1EDOBP8iCob2I9cYsCD8tR+z1ooMt8uN7yC\nP0fGNvPrWIbbD/YuqoDrYKlqt2nBJdG1i35Ptxv9AWpvfRls4dq+/4XPcmKcrTG3\n+JLLqlhgBwKBgA9xCZnoAm9Uo/vCxbW7FtNCLAhstAx/91o9SlVQC+GcvywPLlaT\nMe9Idw7te4rry591lYzNrUal3bUADtSxGSTyEQZi0ZJyvvIHOTPa3nAOjzLT2kJO\nGb56GrpdQexF9rDywmxOZVtD+1iYWggzwwnaUZS0OhofslQkQ0p531kHAoGADBJB\ndxInubS9yIPjt+AjpTXu8d+HGdo5dyQb2TfRdis+y+9ccUYU6S37+KxiSc06rchB\nbPEWD8lJbGfgvToa2BqsttLnF8dpjYUDdiv3+qVLlwhTu5QrbXNM3jLtBSQbhVgK\nKV1WhQrAKQi7ExOfwsexaLfCgWMyA0QqwolzNZ8CgYADg3cWjg70Kt3/jZ/UTAkw\n/ly/hfBvaAib731Ka66EshHv+XccecAkG/P41pg2K435BbTVgDH/J+/eyCARyCBy\nSay7NTv9+BW5ZVclGOgqZodU7UmSGPKy16VGLLkaTXVrwZ5tFhCe/pNLXAQh88Ld\nSfQRghzw0pbMarDRu1YDfw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "access-cloud-storage-from-code@inspire-ai-40690.iam.gserviceaccount.com",
+  "client_id": "112945169271690445947",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/access-cloud-storage-from-code%40inspire-ai-40690.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
