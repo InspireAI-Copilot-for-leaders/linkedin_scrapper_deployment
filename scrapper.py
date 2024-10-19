@@ -48,7 +48,7 @@ class LinkedInScraper:
         
 
         self.headless = headless
-        self.ua = UserAgent(os=['macos', 'windows'])
+        self.ua = UserAgent()
         self.driver = None
         self.service = webdriver.ChromeService(executable_path=binary_path)
         # Increase max_scroll to load more posts
