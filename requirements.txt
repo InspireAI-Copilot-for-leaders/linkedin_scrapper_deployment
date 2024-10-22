@@ -4,3 +4,4 @@ python-dotenv
 fake-useragent
 chromedriver-py
 google-cloud-storage
+webdriver-manager
