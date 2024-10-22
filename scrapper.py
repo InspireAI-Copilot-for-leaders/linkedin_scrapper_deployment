@@ -22,6 +22,8 @@ from datetime import timedelta
 from concurrent.futures import ThreadPoolExecutor
 import urllib3
 from google.cloud import storage
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 # Suppress warnings
 warnings.filterwarnings("ignore")
@@ -50,7 +52,8 @@ class LinkedInScraper:
         self.headless = headless
         self.ua = UserAgent()
         self.driver = None
-        self.service = webdriver.ChromeService(executable_path=binary_path)
+        #self.service = webdriver.ChromeService(executable_path=binary_path)
+        self.service = ChromeService(ChromeDriverManager().install())
         # Increase max_scroll to load more posts
         self.max_scroll = 100
         self.scroll_pause_time = 0.5  # Reduced from 3 to 0.5 seconds
@@ -74,12 +77,13 @@ class LinkedInScraper:
         chrome_options.add_experimental_option('useAutomationExtension', False)
     
         if self.headless:
-            chrome_options.add_argument("--headless")
+            chrome_options.add_argument("--headless=new")
             logging.info("Headless Chrome Initialized")
         else:
             logging.info("Chrome Initialized")
 
-        self.driver = webdriver.Chrome(service=self.service, options=chrome_options)
+        #self.driver = webdriver.Chrome(service=self.service, options=chrome_options)
+        self.driver = webdriver.Chrome(service=self.service,options=chrome_options)
         self.driver.set_page_load_timeout(60)
         self.driver.set_script_timeout(60)
         self.driver.execute_cdp_cmd("Page.enable", {})
@@ -124,8 +128,10 @@ class LinkedInScraper:
                 EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))
             )
             login.click()
-            
+
             logging.info("Logged in successfully")
+
+            
         except Exception as e:
             logging.error(f"Error in logging in: {e}")
             self.cleanup()
@@ -136,6 +142,13 @@ class LinkedInScraper:
         try:
             profile_posts_url = profile_url.rstrip('/') + '/recent-activity/all/'
             self.driver.get(profile_posts_url)
+            WebDriverWait(self.driver, 10).until(
+                lambda driver: driver.execute_script('return document.readyState') == 'complete'
+            )
+            # Confirm that an expected element is present
+            WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'div.feed-shared-update-v2'))
+            )
             logging.info("Profile page loaded successfully")
         except Exception as e:
             logging.error(f"Error loading profile page: {e}")
@@ -148,6 +161,11 @@ class LinkedInScraper:
         GET_SCROLL_HEIGHT_COMMAND = "return document.body.scrollHeight"
 
         try:
+
+            WebDriverWait(self.driver, 20).until(
+                EC.presence_of_element_located((By.TAG_NAME, "body"))
+            )
+
             last_height = self.driver.execute_script(GET_SCROLL_HEIGHT_COMMAND)
             scrolls = 0
             no_change_count = 0
