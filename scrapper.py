@@ -142,9 +142,6 @@ class LinkedInScraper:
         try:
             profile_posts_url = profile_url.rstrip('/') + '/recent-activity/all/'
             self.driver.get(profile_posts_url)
-            WebDriverWait(self.driver, 10).until(
-                lambda driver: driver.execute_script('return document.readyState') == 'complete'
-            )
             # Confirm that an expected element is present
             WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, 'div.feed-shared-update-v2'))
