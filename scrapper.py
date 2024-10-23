@@ -145,9 +145,9 @@ class LinkedInScraper:
             logging.info(f"Loading profile page: {profile_posts_url}")
             self.driver.get(profile_posts_url)
             # Confirm that an expected element is present
-            WebDriverWait(self.driver, 30).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'div.feed-shared-update-v2'))
-            )
+            # WebDriverWait(self.driver, 30).until(
+            #     EC.presence_of_element_located((By.CSS_SELECTOR, 'div.feed-shared-update-v2'))
+            # )
             logging.info("Profile page loaded successfully")
         except Exception as e:
             logging.error(f"Error loading profile page: {e}")
