@@ -53,7 +53,9 @@ class LinkedInScraper:
         self.ua = UserAgent()
         self.driver = None
         #self.service = webdriver.ChromeService(executable_path=binary_path)
-        self.service = ChromeService(ChromeDriverManager().install())
+        #self.service = ChromeService(ChromeDriverManager().install())
+        self.service = ChromeService(executable_path='/usr/local/bin/chromedriver')
+
         # Increase max_scroll to load more posts
         self.max_scroll = 100
         self.scroll_pause_time = 0.5  # Reduced from 3 to 0.5 seconds
