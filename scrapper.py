@@ -175,7 +175,7 @@ class LinkedInScraper:
                 time.sleep(self.scroll_pause_time)
 
                 # Wait for posts to load
-                #self.wait_for_posts_to_load()
+                self.wait_for_posts_to_load()
 
                 new_height = self.driver.execute_script(GET_SCROLL_HEIGHT_COMMAND)
 

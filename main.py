@@ -4,7 +4,7 @@ from scrapper import LinkedInScraper
 def scrape_linkedin(request):
     # Get parameters from the request or environment variables
     profile_url = os.getenv('PROFILE_URL', 'https://www.linkedin.com/in/shreniksj/')
-    #profile_url = "https://www.linkedin.com/in/arinverma/"
+    #profile_url = "https://www.linkedin.com/in/aviral-bhatnagar-ajuniorvc/"
     bucket_name = os.getenv('BUCKET_NAME', 'linkedin_scrapper_csv_files')
 
     scraper = LinkedInScraper(headless=True)
